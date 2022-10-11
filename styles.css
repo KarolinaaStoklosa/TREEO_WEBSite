@@ -1,7 +1,7 @@
 :root{
     --gold-color:#754604;
     --my-black-color:#0a0a0a;
-    --text-color:#f5f3e9;
+    --text-color:#f1f1f1;
 }
 body,html {
     height: 100%;
@@ -12,7 +12,7 @@ body,html {
 }
 
 .main-container {
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'Source Sans Pro', sans-serif;  
     height:100%;
     width:100%;
     margin:0px;
@@ -36,6 +36,7 @@ body,html {
 .main-nav {
     min-height: 60px;
     color: var(--text-color);
+    font-size: 20px;
     width:100%;
     display:flex;
     flex-direction: row;
@@ -59,6 +60,7 @@ ul {
     display:flex;
     flex-direction: row;
     margin:10px;
+    
 }
 
     
@@ -71,8 +73,8 @@ ul {
 }
 #name{
     font-size: 60px;
+    background: rgba(0, 0, 0, 0.3); /* Black background with 0.5 opacity */
     color: var(--text-color);
-    background-color:#0a0a0a41;
     padding:5px;
     margin:5px;
 }
@@ -178,11 +180,22 @@ i{
     border-left: var(--gold-color) solid 1px;
     border-bottom: var(--gold-color) solid 1px;
 }
-
-.third-inner-container{
+.realization-main-container{
     margin:10%;
-    height:600px;
+    width:80%;
+    height:900px;
     border: var(--gold-color) solid 1px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.realization-title{
+    padding:30px;
+}
+.third-inner-container{
+    height:100%;
+    width:100%;
     display:flex;
     flex-direction: row;
 }
@@ -208,7 +221,6 @@ i{
 .realization-square-second-section{
     height:80%;
     width:80%;
-    border: var(--gold-color) solid 1px;
     color:rgba(0, 0, 0, 0);
     
 }
@@ -218,10 +230,11 @@ i{
     background-size: cover;
     height:100%;
     width:100%;
+    border: var(--gold-color) solid 1px;
+    transition: transform .5s;
 }
 #first-realization:hover{
-    height:110%;
-    width:110%;
+    transform: scale(1.1);
     border: var(--gold-color) solid 1px;
     color: var(--text-color);
     display:flex;
@@ -231,45 +244,55 @@ i{
 span{
     font-size: 20px;
 }
-#second-realization{
-    background-image: url("./images/_MG_8366.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
+.realization-inner-container {
     height:40%;
     width:30%;
-    color:rgba(0, 0, 0, 0);
-}
-#second-realization:hover{
     border: var(--gold-color) solid 1px;
-    color: var(--my-black-color);
-    opacity:0.3;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    
+    position:relative;
+}
+.realization-inner-container2 {
+    height:30%;
+    width:40%;
+    border: var(--gold-color) solid 1px;
+    position:relative;
+}
+.image-realization {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:1;
+    height:100%;
+    width:100%;
+}
+#second-realization{
+    background-image: url("./images/_MG_8366.JPG");    
 }
 #third-realization{
-    background-image: url("./images/_MG_8366.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:30%;
-    width:40%;
-    color:rgba(0, 0, 0, 0);
+    background-image: url("./images/_MG_8366.JPG");    
 }
 #fourth-realization{
-    background-image: url("./images/_MG_8366.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:30%;
-    width:40%;
-    color:rgba(0, 0, 0, 0);
+    background-image: url("./images/_MG_8366.JPG");    
 }
 #fifth-realization{
-    background-image: url("./images/_MG_8366.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:40%;
-    width:30%;
-    color:rgba(0, 0, 0, 0);
+    background-image: url("./images/_MG_8366.JPG");    
+}
+.realization-inner-container:hover .image-realization {
+    opacity:0.3;
+    cursor: pointer;
+}
+.realization-inner-container2:hover .image-realization {
+    opacity:0.3;
+    cursor: pointer;
+}
+.text-realization {
+    color: var(--text-color);
+    opacity:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.realization-inner-container:hover .text-realization {
+    opacity:1;
+}
+.realization-inner-container2:hover .text-realization {
+    opacity:1;
 }
